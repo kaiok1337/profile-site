@@ -24,7 +24,7 @@ nav a {
 }
 
 nav a:hover,
-#littleO:hover {
+#navO:hover {
   background-color: black;
   color:rgb(210, 210, 211);
 }
@@ -114,6 +114,13 @@ nav a:hover,
 }
 
 
-#mainName:hover {
+/* #mainName:hover {
   cursor: pointer
-}
+} */
+
+/* @media screen and (max-width: 600px) {
+  #mainName{
+    text-align: center;
+  }
+  
+} */

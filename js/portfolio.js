@@ -1,6 +1,5 @@
-let id = false;
-const name = {
-    alphabet: ['Ø', 'K', 'a','9', 'c', 'd', 'e', 'f', 'g', 'p', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '!', '@', '#', '$', '%', '&', '!', '@', '#', '$', '%', '&','!', '@', '#', '$', '%', '&','!', '@', '#', '$', '%', '&','!', '@', '#', '$', '%', '&','!', '@', '#', '$', '%', '&','!', '@', '#', '$', '%', '&','!', '@', '#', '$', '%', '&','!', '@', '#', '$', '%', '&','!', '@', '#', '$', '%', '&','!', '@', '#', '$', '%', '&','!', '@', '#', '$', '%', '&','!', '@', '#', '$', '%', '&','!', '@', '#', '$', '%', '&','!', '@', '#', '$', '%', '&','!', '@', '#', '$', '%', '&','!', '@', '#', '$', '%', '&','!', '@', '#', '$', '%', '&','!', '@', '#', '$', '%', '&','!', '@', '#', '$', '%', '&','!', '@', '#', '$', '%', '&','!', '@', '#', '$', '%', '&','!', '@', '#', '$', '%', '&','!', '@', '#', '$', '%', '&','!', '@', '#', '$', '%', '&','!', '@', '#', '$', '%', '&'],
+const bigName = {
+    alphabet: ['Ø', 'K', 'a','9', 'l', 'l', 'e', 's', 'g', 'p', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 's', 's', 'a', 's', 'n', 'a', 'k', 'w', 'x', 'Ø', 'z', '!', '@', '#', '$', '%', 'e', '!', 'k', 'l', '$', '%', '&','!', '@', '#', '$', '%', '&','!', '@', '#', '$', 'a', 'e','!', '@', '#', '$', '%', 'a','i', '@', '#', '$', '%', '&','o', '@', '#', '$', 'e', '&','!', '@', 'K', 'n', '%', '&','!', 'Ø', '#', '$', '%', '&','!', 'e', '#', '$', '%', '&','!', 's', '#', '$', '%', 'k','!', '@', 'o', '$', '%', '&','!', '@', '#', '$', 'e', 'e','!', '@', 'l', '$', '%', 'a','!', '@', 'e', '$', 'K', '&','o', '@', '#', '$', 'a', '&','!', '@', 'i', 'n', '%', 'k','!', 'Ø', 'o', '$', '%', '&','!', '@', '#', '$', '%', 'Ø','i', '@', '#', 'K', '%', '&','!', 's', '#', '$', '%', '&','!', '@', '#', '$', 's', '&','!', '@', '#', 'n', '%', '&','!', '@', '#', '$', '%', '&','!', '@', '#', '$', '%', 'Ø','!', '@', '#', '$', '%', '&'],
     capK: [document.getElementById('capK'), 'K'],
     littleA: [document.getElementById('littleA'), 'a'],
     littleI: [document.getElementById('littleI'), 'i'],
@@ -14,55 +13,50 @@ const name = {
     littleN: [document.getElementById('littleN'), 'n'],
     shuffle: (array) => {
         let currentIndex = array.length,  randomIndex;
-      
         while (currentIndex != 0) {
-    
           randomIndex = Math.floor(Math.random() * currentIndex);
           currentIndex--;
-      
           [array[currentIndex], array[randomIndex]] = [
             array[randomIndex], array[currentIndex]];
         }
-      
         return array;
       },
     changeLetter: (letter) => {
-        letter[0].innerText = '5'
-            for (i = 0; i < name.alphabet.length; i++) {
-                if (name.alphabet[i] === letter[1]) {
+        letter[0].innerText = '0'
+            for (let i = 0; i < bigName.alphabet.length; i++) {
+                (() => {bigName.shuffle(bigName.alphabet)})()
+                if (bigName.alphabet[i] === letter[1]) {
                     console.log('yup');
                     ((i) => {
                         setTimeout(() => {
-                        (() => {name.shuffle(name.alphabet)})()
                         letter[0].innerText = letter[1];
-                         }, i * 40)})(i)
+                         }, i * 5)})(i)
                     return ;
                     } else {
                         ((i) => {
                             setTimeout(() => {
-                            (() => {name.shuffle(name.alphabet)})()
-                            letter[0].innerText = name.alphabet[i];
-                             }, i * 40)})(i)
+                            (() => {bigName.shuffle(bigName.alphabet)})()
+                            letter[0].innerText = bigName.alphabet[i];
+                             }, i * 5)})(i)
                 }
         }
         
     }
 } 
-    
+const button = document.getElementById('butt')
+button.addEventListener('click', console.log('bobomama'))
 
-
-
-window.onload = name.changeLetter(name.capK);
-window.onload = name.changeLetter(name.littleA);
-window.onload = name.changeLetter(name.littleI);
-window.onload = name.changeLetter(name.bigO);
-window.onload = name.changeLetter(name.littleK);
-window.onload = name.changeLetter(name.littleL);
-window.onload = name.changeLetter(name.littleE);
-window.onload = name.changeLetter(name.firstS);
-window.onload = name.changeLetter(name.secondS);
-window.onload = name.changeLetter(name.littleO);
-window.onload = name.changeLetter(name.littleN);
+window.onload = bigName.changeLetter(bigName.capK);
+window.onload = bigName.changeLetter(bigName.littleA);
+window.onload = bigName.changeLetter(bigName.littleI);
+window.onload = bigName.changeLetter(bigName.bigO);
+window.onload = bigName.changeLetter(bigName.littleK);
+window.onload = bigName.changeLetter(bigName.littleL);
+window.onload = bigName.changeLetter(bigName.littleE);
+window.onload = bigName.changeLetter(bigName.firstS);
+window.onload = bigName.changeLetter(bigName.secondS);
+window.onload = bigName.changeLetter(bigName.littleO);
+window.onload = bigName.changeLetter(bigName.littleN);
 
 // const home = document.getElementById('HOME')
 
