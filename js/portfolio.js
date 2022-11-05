@@ -43,8 +43,6 @@ const bigName = {
         
     }
 } 
-const button = document.getElementById('butt')
-button.addEventListener('click', console.log('bobomama'))
 
 window.onload = bigName.changeLetter(bigName.capK);
 window.onload = bigName.changeLetter(bigName.littleA);
