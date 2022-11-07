@@ -26,7 +26,6 @@ const bigName = {
             for (let i = 0; i < bigName.alphabet.length; i++) {
                 (() => {bigName.shuffle(bigName.alphabet)})()
                 if (bigName.alphabet[i] === letter[1]) {
-                    console.log('yup');
                     ((i) => {
                         setTimeout(() => {
                         letter[0].innerText = letter[1];
