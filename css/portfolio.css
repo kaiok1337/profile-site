@@ -7,16 +7,16 @@ nav {
   display: flex;
   cursor: pointer;
   height: 60px;
-  position: relative;
+  position: fixed;
   flex-direction: row;
-  top: 37px;
-  left: 30px;
+  margin-top: 2em;
+  margin-left: 2em;
   z-index: 1;
 }
 
 nav div {
   padding: 10px;
-  font-size: 30px;
+  font-size: 2em;
 }
 
 nav a {
@@ -37,12 +37,6 @@ nav a:hover {
   animation-fill-mode: none;
   animation-play-state: running;
   -webkit-text-size-adjust: none;
-}
-
-
-#dinkle {
-    position: fixed;
-    top: 500px;
 }
 
 
@@ -97,9 +91,6 @@ nav a:hover {
   }
 }
 
-/* #mainName:hover {
-  cursor: pointer
-} */
 
 @media screen and (max-width: 600px) {
   #nameContainer{

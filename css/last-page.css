@@ -1,0 +1,62 @@
+* {
+    background-color: rgb(210, 210, 211);
+    font-family: "Playfair Display", serif;
+  }
+  
+  nav {
+    display: flex;
+    cursor: pointer;
+    height: 60px;
+    position: fixed;
+    flex-direction: row;
+    margin-top: 2em;
+    margin-left: 2em;
+    z-index: 1;
+  }
+  nav div {
+    padding: 10px;
+    font-size: 2em;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  nav a:hover {
+    background-color: black;
+    color:rgb(210, 210, 211);
+    color: black;
+    background: linear-gradient(to right, maroon 30%, rgb(210, 210, 211) 40%, black 10%);
+    background-size: 4000px;
+    background-position: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine ease-in .3s forwards;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    -webkit-text-size-adjust: none;
+  }
+
+  h1 {
+    position: absolute;
+    margin: auto;
+    left: 45%;
+    top: 50%
+  }
+
+  @media screen and (max-width: 600px) {
+    nav {
+      flex-direction: column;
+      top: 10%;
+      text-align: center;
+      left: 0;
+      margin: auto;
+    }
+    nav #nav-line-1,
+    nav #nav-line-2 {
+      display: none;
+      
+    }
+    
+  }

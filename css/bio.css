@@ -9,8 +9,9 @@
     height: 60px;
     position: fixed;
     flex-direction: row;
-    margin-top: 37px;
-    margin-left: 30px;
+    margin-top: 2em;
+    margin-left: 2em;
+    z-index: 1;
   }
   
   nav div {
@@ -38,60 +39,79 @@
     -webkit-text-size-adjust: none;
   }
   
-  
+  #sideNav {
+    display: flex;
+    flex-direction: column;
+  }
   
   #picOfMe {
-      top: 150px;
-      left: 40px;
+      top: 9em;
+      left: 3em;
       position: fixed;
-  }
-  
-  #picOfMe img{
-      width: 400px;
-      height: 300px;
-      padding: 20px;
-      border: 2px solid black;
+      background: none;
+      z-index:1;
       
   }
+
   
-  #contact {
-      text-decoration: none;
-      color: black;
-      position: fixed;
-      width: 30%;
-      top: 750px;
-      left: 40px;
-      padding: 20px;
+  #picOfMe img {
+      width: 77%;
+      z-index: 4
   }
-  
+ 
   #tag {
-      top: 550px;
-      left: 40px;
+      top: 32em;
+      left: 2em;
       position: fixed;
-      width: 300px;
-      padding: 20px;
+      font-size: 1.3em;
+      border-top: 2px solid black;
+      border-bottom: 2px solid black;
+      letter-spacing: .8em;
+  }
+
+  #contact {
+    position: fixed;
+    top: 22em;
+    left: 1.7em;
+    font-size: 2.5em;
+    background: none;
+    text-align: center;
+    
   }
   
+  #contact li,
+  #contact a {
+    list-style-type: none;
+    color: black;
+  }
   
+  .experienceUnderline {
+    text-decoration-line: underline;
+  }
   #bio-text {
       top: 7em;
-      left: 33em;
+      left: 40em;
       width: 25em;
       position: absolute;
       padding: 20px;
       border: 2px solid;
       font-size: 1.1em;
+      margin-bottom: 30px;
       
   }
 
   #bio-text,
-  #experience {
+  #experience,
+  #expCont,
+  #skills {
     -webkit-transition: all 0.6s;
-      transition: all 1s;
+    transition: all 1s;
   }
 
   #bio-text:hover,
-  #experience:hover {
+  #experience:hover,
+  #expCont:hover,
+  #skills:hover {
     box-shadow: 10px 10px 4px rgba(128,0,0,.8);
     transition: box-shadow 0.3s ease-in;
     -webkit-transform: scale(1.25, 1.25);
@@ -100,16 +120,39 @@
 
   #experience {
       position: absolute;
-      left: 80em;
-      top: 70%;
+      left: 73em;
+      top: 38%;
       width: 25em;
       padding: 20px;
       margin-bottom: 30px;
-      border: 2px solid
+      border: 2px solid;
+      font-size: 1.1em;
+  }
+
+  #expCont {
+    position: absolute;
+      left: 40em;
+      top: 87%;
+      width: 25em;
+      padding: 20px;
+      border: 2px solid;
+      font-size: 1.1em;
+  }
+
+  #skills {
+    position: absolute;
+      left: 73em;
+      top: 120%;
+      width: 25em;
+      padding: 20px;
+      margin-bottom: 3em;
+      border: 2px solid;
+      font-size: 1.1em;
+
   }
 
   .page-space {
-    height: .1em;
+    height: .8em;
   }
 
   @keyframes shine {
@@ -123,6 +166,9 @@
 
 
 @media screen and (max-width: 600px) {
+    body {
+        max-width: 600px;
+    }
     nav {
       flex-direction: column;
       top: 10%;
@@ -135,5 +181,41 @@
       display: none;
       
     }
+    #sideNav {
+        align-items: center;
+
+    }
+    #bio-text,
+    #experience,
+    #expCont,
+    #skills {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        left: auto;
+        top: auto;
+        width: 88%;
+
+    }
+    #contact,
+    #tag,
+    #picOfMe,
+    nav{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        left:auto;
+        top: auto;
+        align-items: center;
+
+    }
+    #picOfMe {
+        margin-bottom: 10%;
+        z-index: 0;
+    }
+    #wholeBio {
+        margin-top: 40%;
+    }
+
     
   }

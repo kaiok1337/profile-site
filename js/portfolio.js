@@ -44,8 +44,6 @@ const bigName = {
     }
 } 
 
-//function startListen() {document.getElementById('capK').addEventListener('click', console.log('momma youch'))}
-
 window.onload = bigName.changeLetter(bigName.capK);
 window.onload = bigName.changeLetter(bigName.littleA);
 window.onload = bigName.changeLetter(bigName.littleI);
@@ -57,9 +55,3 @@ window.onload = bigName.changeLetter(bigName.firstS);
 window.onload = bigName.changeLetter(bigName.secondS);
 window.onload = bigName.changeLetter(bigName.littleO);
 window.onload = bigName.changeLetter(bigName.littleN);
-
-// const home = document.getElementById('HOME')
-
-// home.addEventListener('click', console.log('spoop'));
-
-//ADD EVENT LISTENER FOR TEXT RANDOMIZER
