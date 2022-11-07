@@ -44,6 +44,8 @@ const bigName = {
     }
 } 
 
+//function startListen() {document.getElementById('capK').addEventListener('click', console.log('momma youch'))}
+
 window.onload = bigName.changeLetter(bigName.capK);
 window.onload = bigName.changeLetter(bigName.littleA);
 window.onload = bigName.changeLetter(bigName.littleI);

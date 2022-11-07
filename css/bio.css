@@ -1,0 +1,139 @@
+* {
+    background-color: rgb(210, 210, 211);
+    font-family: "Playfair Display", serif;
+  }
+  
+  nav {
+    display: flex;
+    cursor: pointer;
+    height: 60px;
+    position: fixed;
+    flex-direction: row;
+    margin-top: 37px;
+    margin-left: 30px;
+  }
+  
+  nav div {
+    padding: 10px;
+    font-size: 2em;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  nav a:hover {
+    background-color: black;
+    color:rgb(210, 210, 211);
+    color: black;
+    background: linear-gradient(to right, maroon 30%, rgb(210, 210, 211) 40%, black 10%);
+    background-size: 4000px;
+    background-position: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine ease-in .3s forwards;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    -webkit-text-size-adjust: none;
+  }
+  
+  
+  
+  #picOfMe {
+      top: 150px;
+      left: 40px;
+      position: fixed;
+  }
+  
+  #picOfMe img{
+      width: 400px;
+      height: 300px;
+      padding: 20px;
+      border: 2px solid black;
+      
+  }
+  
+  #contact {
+      text-decoration: none;
+      color: black;
+      position: fixed;
+      width: 30%;
+      top: 750px;
+      left: 40px;
+      padding: 20px;
+  }
+  
+  #tag {
+      top: 550px;
+      left: 40px;
+      position: fixed;
+      width: 300px;
+      padding: 20px;
+  }
+  
+  
+  #bio-text {
+      top: 7em;
+      left: 33em;
+      width: 25em;
+      position: absolute;
+      padding: 20px;
+      border: 2px solid;
+      font-size: 1.1em;
+      
+  }
+
+  #bio-text,
+  #experience {
+    -webkit-transition: all 0.6s;
+      transition: all 1s;
+  }
+
+  #bio-text:hover,
+  #experience:hover {
+    box-shadow: 10px 10px 4px rgba(128,0,0,.8);
+    transition: box-shadow 0.3s ease-in;
+    -webkit-transform: scale(1.25, 1.25);
+    transform: scale(1.25, 1.25);
+  }
+
+  #experience {
+      position: absolute;
+      left: 80em;
+      top: 70%;
+      width: 25em;
+      padding: 20px;
+      margin-bottom: 30px;
+      border: 2px solid
+  }
+
+  .page-space {
+    height: .1em;
+  }
+
+  @keyframes shine {
+    0% {
+      background-position: 2000px;
+    }
+    100% {
+      background-position: 4000px;
+    }
+  }
+
+
+@media screen and (max-width: 600px) {
+    nav {
+      flex-direction: column;
+      top: 10%;
+      text-align: center;
+      left: 0;
+      margin: auto;
+    }
+    nav #nav-line-1,
+    nav #nav-line-2 {
+      display: none;
+      
+    }
+    
+  }
