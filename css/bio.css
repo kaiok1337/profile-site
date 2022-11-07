@@ -109,6 +109,11 @@
   }
 
   #bio-text:hover,
+  #experience:hover{
+    z-index: 2;
+  }
+
+  #bio-text:hover,
   #experience:hover,
   #expCont:hover,
   #skills:hover {
