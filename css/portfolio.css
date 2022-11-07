@@ -119,5 +119,14 @@ nav a:hover {
     display: none;
     
   }
+  nav{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    left:auto;
+    top: auto;
+    align-items: center;
+
+}
   
 }
